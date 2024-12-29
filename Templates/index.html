@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Add Bootstrap for additional styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <h1>Analyze Data</h1>
+            <form action="/analyze" method="post">
+                <div class="select-column">
+                    <label for="column">Select Column:</label>
+                    <select name="column" required>
+                        {% for column in columns %}
+                        <option value="{{ column }}">{{ column }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="input-value">
+                    <label for="value">Enter Value to Analyze:</label>
+                    <input type="text" name="value" required>
+                </div>
+
+                <button type="submit" class="btn btn-analyze">Analyze</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
