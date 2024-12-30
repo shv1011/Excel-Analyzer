@@ -1,7 +1,7 @@
 import pandas as pd
 
 def load_excel(file_path):
-    """Load the Excel file into a DataFrame."""
+    #Load the Excel file into a DataFrame.
     try:
         df = pd.read_excel(file_path)
         print("Excel file loaded successfully!")
@@ -11,7 +11,7 @@ def load_excel(file_path):
         return None
 
 def count_occurrences(df, column, value):
-    """Count occurrences of a value in a specified column."""
+    #Count occurrences of a value in a specified column.
     try:
         # Normalize data: Strip spaces and convert to lowercase for comparison
         df[column] = df[column].astype(str).str.strip().str.lower()
@@ -23,7 +23,7 @@ def count_occurrences(df, column, value):
         print(f"Error counting occurrences: {e}")
 
 def apply_filter(df, column, filter_value):
-    """Apply a filter to the DataFrame and return the filtered data."""
+    #Apply a filter to the DataFrame and return the filtered data.
     try:
         # Normalize data: Strip spaces and convert to lowercase for comparison
         df[column] = df[column].astype(str).str.strip().str.lower()
@@ -38,7 +38,7 @@ def apply_filter(df, column, filter_value):
         return None
 
 def main():
-    """Main function to run the program."""
+    #Main function to run the program.
     # Load the Excel file
     file_path = input("Enter the path to the Excel file: ")
     df = load_excel(file_path)
