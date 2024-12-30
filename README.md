@@ -8,5 +8,5 @@ This is a simple Flask-based web application that allows users to upload Excel f
 - Display filtered data on the result page.
 
 <h3>## How to Run Locally</h3>
-1. Clone the repository: `git clone https://github.com/shv1011/Excel-Analyzer`
+1. Clone the repository: `git clone https://github.com/shv1011/Excel-Analyzer`<br>
 2. Run the Flask app: `python app.py`
